@@ -20,7 +20,7 @@ async function fetchAll(urls) {
 		);
 
 		console.log(data);
-	} catch (error) {
+	} catch (error) { 
 		console.log(error);
 	}
 }
