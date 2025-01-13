@@ -2,7 +2,7 @@ async function fetchData() {
 	try {
 		console.log('fetching data');
 
-		// async always returns promise, await keyword is used to resolve/reject the promise 
+		// async always returns promise, await keyword is used to resolve/reject the promise
 
 		let response = await fetch('https://jsonplaceholder.typicode.com/posts');
 		let data = await response.json();
@@ -14,3 +14,8 @@ async function fetchData() {
 }
 
 fetchData();
+
+fetch('https://api.example.com/data')
+	.then((response) => response.json())
+	.then((data) => console.log('data 2', data))
+	.catch((error) => console.error(error));
